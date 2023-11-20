@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEST RESULTS</title>
+
+</head>
+<body>
+    <div >
+        <h2>TEST RESULTS</h2>
+        <form action="{{url_for('predict')}}"method="post">
+        <section >
+            <div>
+                <p>AGE</p>
+                <input type="text" name="AGE" placeholder="Enter AGE">
+
+            </div>
+            <div>
+                <p>GENDER</p>
+                <select id="gender" name="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+             <br>
+          
+        </section>
+        <section>
+            <div>
+                <label for="bloodType">Select your <b>Blood Type</b>:</label>
+                <select id="bloodType" name="BloodType">
+                 <option value="A+">A+</option>
+                 <option value="A-">A-</option>
+                 <option value="B+">B+</option>
+                 <option value="B-">B-</option>
+                 <option value="AB+">AB+</option>
+                 <option value="AB-">AB-</option>
+                 <option value="O+">O+</option>
+                 <option value="O-">O-</option>
+                </select>
+            </div>
+            <br>
+            <div>
+                <checklist  name="MEDICAL CONDITION"></checklist>
+                <label for="MEDICAL CONDITION">Select MEDICAL CONDITION</label></p>
+             <select name="MEDICAL CONDITION" id="job role">
+                <option value="Diabetes">Diabetes</option>
+                <option value="Asthma">Asthma</option>
+                <option value="Obesity">Obesity</option>
+                <option value="Arthritis">Arthritis</option>
+                <option value="Hypertension">Hypertension</option>
+                <option value="Cancer">Cancer</option>
+
+             </select>
+             
+            </section>
+            <br>
+            <section>
+                <checklist  name="INSURANCE PROVIDER"></checklist>
+                <label for="INSURANCE PROVIDER">Select INSURANCE PROVIDER</label></p>
+             <select name="INSURANCE PROVIDER" id="job role">
+                <option value="Medicare">Medicare</option>
+                <option value="UnitedHealthcare">UnitedHealthcare</option>
+                <option value="Aetna">Aetna</option>
+                <option value="Cigna">Cigna</option>
+                <option value="Blue Cross">Blue Cross</option>
+            </select>
+            </section>
+              </div>
+                <div>
+                    <p>Enter BILLING AMOUNT</p>
+                    <input type="text" name="billing amount" placeholder="BILLING AMOUNT">
+                </div>
+            </section>
+            <section >
+                <div>
+                    <p>Enter Room Number</p>
+                    <input type="text" name="room number" placeholder="Room Number">
+                </div>
+                <br>
+                <div><section>
+                    <checklist name="Admission Type"></checklist>
+                    <label for="Admission Type">Select Admission Type</label></p>
+                 <select name="Admission Type" id="job role">
+                    <option value="Elective">Elective</option>
+                    <option value="Emergency">Emergency</option>
+                    <option value="Urgent">Urgent</option>
+                </select>
+                </section>
+            </div>
+            <br>
+            <div>
+                <section>
+                <checklist  name="Medication"></checklist>
+                <label for="Medication">Select Medication</label></p>
+             <select name="Medication" id="job role">
+                <option value="Aspirin">Aspirin</option>
+                <option value="Lipitor"></option>
+                <option value="Penicillin">Penicillin</option>
+                <option value="Paracetamol">Paracetamol</option>                
+                <option value="Ibuprofen">Ibuprofen</option>                
+            </select>
+            </section>
+            </div>
+            <br>
+            <div>
+                <p>Enter duration of stay</p>
+                <input type="text" name="duration" placeholder="duration">
+            </div>
+
+            </section>
+            <br>
+            <Button>PREDICT TEST RESULTS</Button>
+                    </div>
+                    <br>
+                    <br>
+            <b>{{prediction_text}}</b>
+    </div>
+</body>
+</html>
